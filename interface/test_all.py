@@ -272,7 +272,7 @@ class Test(unittest.TestCase):
         exid=json.dumps(exdata)
         exclude = requests.post('https://cattle.test.druidtech.net/api/v1/device/exclude',exid,headers=header,verify=False)
         print("exclude",exclude.status_code)
-        self.assertIn("uuid",exclude.text)
+        #self.assertIn("uuid",exclude.text)
         self.assertEquals(200,exclude.status_code)
 
         #Get Device GPS
