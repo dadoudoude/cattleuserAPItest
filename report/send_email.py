@@ -25,7 +25,7 @@ def main2():
     TO = ['274717413@qq.com']
     config = {
         "from": "773767639@qq.com",
-        "from_name": '鸟类数据中心API自动化测试报告:',
+        "from_name": '奶牛userAPI自动化测试报告:',
         "to": TO,
         "serverip": "smtp.qq.com",
         "serverport": "465",
@@ -36,7 +36,7 @@ def main2():
     title = "鸟类数据中心API自动化测试报告"
 
     #f = open("C:\\Users\\liugc\\PycharmProjects\\birddatacenter\\report\\result.html", 'rb')
-    f = open("/var/lib/jenkins/workspace/birduserAPItest/report/result.html", 'rb')
+    f = open("/var/lib/jenkins/workspace/cattleuserAPItest/report/result.html", 'rb')
     mail_body = f.read()
     f.close()
     sendEmail(mail_body, title, config['from_name'], config['from'], config['to'], config['serverport'], config['serverip'],
