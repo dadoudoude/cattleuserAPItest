@@ -448,7 +448,7 @@ class Test(unittest.TestCase):
 
         #Update image by Device
         #f=open("C:\\Users\\liugc\\PycharmProjects\\cattleuser\\dog.jpg","rb")
-        f=open("/var/lib/jenkins/workspace/cameluserAPItest/new.jpg","rb")
+        f=open("/var/lib/jenkins/workspace/cattleuserAPItest/interface/new.jpg","rb")
         data=f.read()
         pictureupdate=requests.put('https://cattle.test.druidtech.net/api/v1/biological/cattle/device/'+deviceid+'/image/dog.jpg',data,headers=header,verify=False)
         self.assertEquals(201,pictureupdate.status_code)
@@ -502,7 +502,7 @@ class Test(unittest.TestCase):
         #Delete Image By device
         #Update image by Device再次上传一张图片
         #f2=open("C:\\Users\\liugc\\PycharmProjects\\cattleuser\\new.jpg","rb")
-        f2=open("/var/lib/jenkins/workspace/cameluserAPItest/new.jpg","rb")
+        f2=open("/var/lib/jenkins/workspace/cattleuserAPItest/interface/new.jpg","rb")
         data2=f2.read()
         pictureupdate2=requests.put('https://cattle.test.druidtech.net/api/v1/biological/cattle/device/'+deviceid+'/image/new.jpg',data2,headers=header,verify=False)
         print("url: ",'https://cattle.test.druidtech.net/api/v1/device/cattle/device/'+deviceid+'/image/new.jpg')
