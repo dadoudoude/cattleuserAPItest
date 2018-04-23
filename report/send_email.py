@@ -33,9 +33,9 @@ def main2():
         "password": "nukzwhfhhifrbdbg"  # QQ邮箱的SMTP授权码
     }
 
-    title = "鸟类数据中心API自动化测试报告"
+    title = "奶牛userAPI自动化测试报告"
 
-    #f = open("C:\\Users\\liugc\\PycharmProjects\\birddatacenter\\report\\result.html", 'rb')
+    #f = open("C:\\Users\\liugc\\PycharmProjects\\cattleuser\\report\\result.html", 'rb')
     f = open("/var/lib/jenkins/workspace/cattleuserAPItest/report/result.html", 'rb')
     mail_body = f.read()
     f.close()

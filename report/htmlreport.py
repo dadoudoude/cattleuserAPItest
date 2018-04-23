@@ -3,9 +3,9 @@ import unittest
 import HTMLTestRunner
 import sys
 sys.path.append('/var/lib/jenkins/workspace/birduserAPItest/report')
-from send_email import main2
+from report.send_email import main2
 def all_case():
-    #case_dir = "C:\\Users\\liugc\\PycharmProjects\\birddatacenter\\interface"
+    #case_dir = "C:\\Users\\liugc\\PycharmProjects\\cattleuser\\interface"
     case_dir = "/var/lib/jenkins/workspace/cattleuserAPItest/interface"
     testcase = unittest.TestSuite()
     discover = unittest.defaultTestLoader.discover(case_dir,pattern="test*.py",top_level_dir=None)
@@ -20,7 +20,7 @@ def all_case():
     return testcase
 if __name__ == "__main__":
 
-    #report_path="C:\\Users\\liugc\\PycharmProjects\\birddatacenter\\report\\result.html"
+    #report_path="C:\\Users\\liugc\\PycharmProjects\\cattleuser\\report\\result.html"
     report_path="/var/lib/jenkins/workspace/cattleuserAPItest/report/result.html"
     fp= open(report_path,"wb")
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp,
